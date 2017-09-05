@@ -1,0 +1,16 @@
+name: 'alphafalfa'
+message: ' '
+url: 'http://www.orfeus-eu.org/fdsnws/dataselect/1/query?starttime=2014-01-01T00:20:00&endtime=2014-01-01T00:50:00&net=NL&cha=BHZ'
+
+names: [ 'alpha', 'beta', 'gama']
+links:
+  - 'http://www.geomag.bgs.ac.uk/web_service/GMModels/wmm/2015?latitude=10&longitude=20&altitude=1&year=2020.0&format=xml'
+  - 'http://www.orfeus-eu.org/fdsnws/dataselect/1/query?starttime=2014-01-01T00:20:00&endtime=2014-01-01T00:50:00&net=NL&cha=BHZ'
+  - 'http://webservices.ingv.it/fdsnws/dataselect/1/query?starttime=2014-01-01T00:20:00&endtime=2014-01-01T00:50:00&net=MN&cha=BHZ'
+
+name1: alpha1
+message1: 'http://www.orfeus-eu.org/fdsnws/dataselect/1/query?starttime=2014-01-01T00:20:00&endtime=2014-01-01T00:50:00&net=NL&cha=BHZ'
+name2: alpha2
+message2: 'http://webservices.ingv.it/fdsnws/dataselect/1/query?starttime=2014-01-01T00:20:00&endtime=2014-01-01T00:50:00&net=MN&cha=BHZ'
+
+fileout: 'test'
