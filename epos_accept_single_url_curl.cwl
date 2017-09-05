@@ -12,12 +12,17 @@ inputs:
   message: string
 
 outputs:
-  []
+  download:
+    type: File        
+    outputBinding:  
+      glob: $(step1.curl)
 
 steps:
   step0:
     run:
       class: CommandLineTool
+
+      # generate fileout 
 
       baseCommand: [ 'uuidgen' ]
 
@@ -27,12 +32,15 @@ steps:
         uuid: 
           type: stdout 
 
+
     in: []
-    out: [uuid] # file
+    out: [uuid] # fileout
 
   step1:
     run:
       class: CommandLineTool
+
+      # download via curl to fileout location
 
       baseCommand: [ 'curl' ]
 
@@ -48,17 +56,16 @@ steps:
             prefix: '-o'
             position: 2
 
-      #stdout: ${inputs.fileout}
+      #stdout: $(inputs.fileout.basename)
 
       outputs:
-        download:
+        curl:
           type: File        
           outputBinding:  
-            glob: ${inputs.fileout}
+              glob: $(inputs.fileout.basename)
 
     in:
       url: message
       fileout: step0/uuid
 
-    out: 
-      [download]
+    out: [curl]
