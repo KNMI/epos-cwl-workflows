@@ -14,8 +14,7 @@ inputs:
 outputs:
   download:
     type: File        
-    outputBinding:  
-      glob: $(step1.curl)
+    outputSource:  "#step1/curl"
 
 steps:
   step0:
@@ -52,11 +51,11 @@ steps:
 
         fileout: 
           type: File
-          inputBinding:
-            prefix: '-o'
-            position: 2
+          #inputBinding:
+          #  prefix: '-o'
+          #  position: 2
 
-      #stdout: $(inputs.fileout.basename)
+      stdout: $(inputs.fileout.basename)
 
       outputs:
         curl:
