@@ -51,9 +51,6 @@ steps:
 
         fileout: 
           type: File
-          #inputBinding:
-          #  prefix: '-o'
-          #  position: 2
 
       stdout: $(inputs.fileout.basename)
 
