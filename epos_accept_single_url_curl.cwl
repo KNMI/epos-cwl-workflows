@@ -23,13 +23,16 @@ steps:
 
       # generate fileout 
 
-      baseCommand: [ 'uuidgen' ]
+      baseCommand: [ 'mktemp' ,'download.epos.XXXXXXXX']
+
 
       inputs: []
 
       outputs:
         uuid: 
-          type: stdout 
+          type: File
+          outputBinding:
+            glob: 'download.epos.*'
 
 
     in: []
