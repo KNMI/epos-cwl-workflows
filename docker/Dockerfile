@@ -22,7 +22,7 @@ RUN pip install Flask
 
 EXPOSE 5000
 
-CMD FLASK_APP=flask_web.py flask run
+CMD FLASK_APP=flask_web.py flask run --host=0.0.0.0
 
 #ENTRYPOINT ["bash"]
 
