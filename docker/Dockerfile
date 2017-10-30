@@ -16,8 +16,9 @@ RUN mkdir -p /home/test/
 WORKDIR /home/test
 
 RUN mkdir -p /home/test/epos-cwl-workflows/
-RUN git clone /usr/people/mihajlov/docker/cwl/epos-cwl-workflows
-#RUN git clone https://github.com/andrejsim/epos-cwl-workflows.git
+
+#RUN git clone /usr/people/mihajlov/docker/cwl/epos-cwl-workflows
+RUN git clone https://github.com/andrejsim/epos-cwl-workflows.git
 
 WORKDIR /home/test/epos-cwl-workflows
 
@@ -27,7 +28,7 @@ EXPOSE 5002
 
 #CMD FLASK_APP=flask_web.py flask run --host=0.0.0.0
 
-#RUN echo 'gunicorn -w 9 -b 0.0.0.0:5002 "flask_web.bootstrap_app()" --log-level debug --backlog 0 --timeout 120 --error-logfile error.log --log-file access.log' >> docker_entry.sh 
+#RUN echo 'gunicorn -w 9 -b 0.0.0.0:5002 "flask_web:bootstrap_app()" --log-level debug --backlog 0 --timeout 120 --error-logfile error.log --log-file access.log' >> docker_entry.sh 
 
 ENTRYPOINT bash #docker_entry.sh
 
