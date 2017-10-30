@@ -14,3 +14,10 @@ The current implementation will run in serial with cwltool.
 
 However to demonstrate parallel data flows, arvados or toil needs to be used as the cwl orchestrator.
 
+Dockerized
+docker element included for running example.
+
+
+TIP: use cwl worlflow viewer ---
+https://view.commonwl.org/
+
