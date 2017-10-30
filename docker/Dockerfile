@@ -20,7 +20,11 @@ WORKDIR /home/test/epos-cwl-workflows
 
 RUN pip install Flask
 
-ENTRYPOINT ["bash"]
+EXPOSE 5000
+
+CMD FLASK_APP=flask_web.py flask run
+
+#ENTRYPOINT ["bash"]
 
 # docker build -t cwl_tool docker/
 # docker run -it cwl_tool 
