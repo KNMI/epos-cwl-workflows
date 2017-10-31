@@ -17,7 +17,7 @@ The current implementation will run in serial with cwltool. However to demonstra
 Docker element included for running example.
 
 
-### Tip: 
+### Tip
 Use cwl worlflow viewer ---
 https://view.commonwl.org/
 
