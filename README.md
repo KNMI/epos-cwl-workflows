@@ -3,9 +3,9 @@ EPOS Common Workflow Language workflows
 
 see
 https://github.com/common-workflow-language/common-workflow-language
-
+'''
 cwl-runner epos_accept_single_url_curl.cwl epos_inputs.yml
-
+'''
 if the command requires to be run without yaml input use:
 
 cwl-runner epos_accept_url_array_scatter.cwl --links [ 'url1',... 'urlX']
