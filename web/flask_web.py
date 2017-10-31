@@ -3,7 +3,7 @@ import subprocess
 
 
 '''
-	...
+  ...
 ''' 
 
 app = Flask(__name__)
@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 ''' gunicorn entry '''
 def bootstrap_app():
-	return app
+  return app
 
 
 @app.route("/")
@@ -21,13 +21,12 @@ def start():
 @app.route("/cwlrunner/")
 def cwlrunner():
 
-	try:
-		process = subprocess.Popen( "cwltool --version"  , shell=True).communicate() 
+  try:
+    process = subprocess.Popen( "cwltool --version"  , shell=True).communicate() 
 
-	     return "cwl-runner ..." + str(process)
-	
-	except Exception as e:
-		return e
+    return process
+  except Exception as e:
+    return e
 
     return "cwl-runner ..."
 

@@ -18,6 +18,8 @@ WORKDIR /home/test
 RUN mkdir -p /home/test/epos-cwl-workflows/
 
 #RUN git clone /usr/people/mihajlov/docker/cwl/epos-cwl-workflows
+
+
 RUN git clone https://github.com/andrejsim/epos-cwl-workflows.git
 
 WORKDIR /home/test/epos-cwl-workflows
