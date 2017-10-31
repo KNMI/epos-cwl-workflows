@@ -1,4 +1,11 @@
 from flask import Flask
+import subprocess
+
+
+'''
+	...
+''' 
+
 app = Flask(__name__)
 
 
@@ -11,6 +18,18 @@ def bootstrap_app():
 def start():
     return "EPOS Workflow Service"
 
+@app.route("/cwlrunner/")
+def cwlrunner():
+
+	try:
+		process = subprocess.Popen( "cwltool --version"  , shell=True).communicate() 
+
+	     return "cwl-runner ..." + str(process)
+	
+	except Exception as e:
+		return e
+
+    return "cwl-runner ..."
 
 @app.route("/cwltool/")
 def cwltool():
