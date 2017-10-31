@@ -26,9 +26,9 @@ RUN pip install Flask gunicorn
 
 EXPOSE 5002
 
-#CMD FLASK_APP=flask_web.py flask run --host=0.0.0.0
+#CMD FLASK_APP=flask/flask_web.py flask run --host=0.0.0.0
 
-#RUN echo 'gunicorn -w 9 -b 0.0.0.0:5002 "flask_web:bootstrap_app()" --log-level debug --backlog 0 --timeout 120 --error-logfile error.log --log-file access.log' >> docker_entry.sh 
+#RUN echo 'gunicorn -w 9 -b 0.0.0.0:5002 "flask/flask_web:bootstrap_app()" --log-level debug --backlog 0 --timeout 120 --error-logfile error.log --log-file access.log' >> docker_entry.sh 
 
 ENTRYPOINT bash #docker_entry.sh
 
