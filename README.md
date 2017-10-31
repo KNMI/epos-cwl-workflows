@@ -13,11 +13,11 @@ cwl-runner epos_accept_url_array_scatter.cwl --links [ 'url1',... 'urlX']
 ```
 The current implementation will run in serial with cwltool. However to demonstrate parallel data flows, arvados or toil needs to be used as the cwl orchestrator.
 
-##Dockerized
+## Dockerized
 Docker element included for running example.
 
 
-#TIP: 
+# TIP: 
 Use cwl worlflow viewer ---
 https://view.commonwl.org/
 
