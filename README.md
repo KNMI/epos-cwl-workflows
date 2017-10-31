@@ -16,7 +16,7 @@ The current implementation will run in serial with cwltool. However to demonstra
 ### Dockerized
 Docker element included for running example.
 
- > $ docker build -t epos_cwl_tool docker   
+ > $ docker build -t epos_cwl_tool docker/   
  > $ docker run  -it epos_cwl_tool 
 
 
