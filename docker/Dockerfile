@@ -9,8 +9,9 @@ RUN apt-get update -qq && apt-get install -qqy \
     curl \
     lxc \
     iptables \
-    python-setuptools \
-    cwlref-runner
+    python-setuptools
+    
+RUN pip install cwlref-runner
 
 RUN mkdir -p /home/test/
 
@@ -37,4 +38,6 @@ ENTRYPOINT bash #docker_entry.sh
 # 
 # RUN  cwltool epos_accept_url_array_scatter.cwl epos_inputs.yml
 # 
+
+
 
